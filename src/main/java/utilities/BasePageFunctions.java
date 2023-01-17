@@ -82,17 +82,6 @@ public abstract class BasePageFunctions {
         }
     }
 
-    // element to be clickable
-    public Boolean waitForElementToBeClickable(By elem) {
-        try {
-            wait.until(ExpectedConditions.elementToBeClickable(elem));
-            return true;
-        } catch (Exception e) {
-            System.out.println("Wait for element to be clickable was not worked correct");
-            return false;
-        }
-    }
-
     // wait for element to be visible
     public Boolean waitForElementToBeVisible(By elem) {
         try {

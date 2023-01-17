@@ -20,16 +20,16 @@ public class SignInPage extends BasePageFunctions {
     }
 
     By featuresTextBox = By.xpath("//ul[@class='features']//li");
-    By loginBTN = By.cssSelector(".btn.btn-primary.btn-lwide");
+    By loginBTN = By.xpath("//button[@class='btn btn-primary']");
     By emailFieldToWait = By.xpath("//input[@placeholder='Work e-mail']");
     By emailField = By.cssSelector(".input-text");
     String fakeMail = "abcd@gmail.com";
-    By errorPopup = By.cssSelector(".notification-wrapper>.notification.type-validation");
+    By errorPopup = By.cssSelector(".notification-wrapper");
     By errorTextElement = By.xpath("//div[@class='notification-inner']//*");
-    By forgotMyEmailBTN = By.cssSelector(".col .forgot");
+    By forgotMyEmailBTN = By.cssSelector(".forgot");
 
     // validate we are on the right page
-    public Boolean validatePage() {
+    public Boolean validateLoginPage() {
         waitForElementToBeVisible(emailFieldToWait);
         return getTextFromElement(loginBTN).equalsIgnoreCase("login");
     }
