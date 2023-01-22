@@ -22,7 +22,7 @@ public class MainRunnerTest extends BaseTest {
     private String signUpURL;
 
     @BeforeClass
-    public void beforeMethod() {
+    public void beforeClass() {
         try {
             // load properties
             Properties props = new Properties();
